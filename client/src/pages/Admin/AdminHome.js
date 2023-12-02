@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { useSelector } from "react-redux";
+import EmbeddedGoogleMap from "./EmbeddedGoogleMap";
 
 const AdminHome = () => {
   const { user } = useSelector((state) => state.auth);
@@ -13,33 +14,21 @@ const AdminHome = () => {
           </h1>
           <h3>Manage Blood Bank App </h3>
           <hr />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-            explicabo animi blanditiis incidunt dicta quia, quibusdam facere
-            corporis! Dolores, reprehenderit cum sed repellat laudantium
-            architecto natus est nostrum accusamus, odio aspernatur minima
-            fugiat quam molestiae nisi. Temporibus impedit dolorem quia.
-            Distinctio modi non excepturi illo odio voluptatum quae nostrum a
-            temporibus sequi! Explicabo, quasi consequatur ad qui quos labore
-            distinctio voluptates alias nostrum ab dicta aspernatur molestias
-            adipisci quibusdam error ipsa. Totam, tenetur dolores eaque tempora
-            officiis deserunt assumenda? Rerum nemo est nihil laudantium
-            necessitatibus. Possimus, voluptatem voluptates blanditiis quas
-            aspernatur, quam, quaerat minus maiores ipsam sint perferendis
-            dolor. Dignissimos voluptatem doloribus sint in quis omnis, atque
-            neque praesentium voluptatum suscipit. Quas esse, accusantium maxime
-            obcaecati iure officiis aperiam minus alias quod cum quos qui
-            voluptatibus, numquam, ad id dolore odit! Minima laudantium sunt,
-            explicabo nesciunt quos voluptatibus qui libero eligendi praesentium
-            debitis obcaecati similique assumenda nobis labore totam dolore
-            perferendis adipisci fugiat quibusdam tempore doloremque voluptatum
-            accusantium. Accusamus, incidunt sequi. Esse sunt officia fuga,
-            officiis saepe tempora repellat suscipit aliquid cupiditate
-            perferendis, asperiores architecto molestiae rem iste eaque
-            molestias reiciendis. Laborum modi asperiores, reprehenderit
-            assumenda numquam, vitae exercitationem illum nesciunt, dolorum
-            deleniti accusamus consequatur id. Necessitatibus dolore ad fugit?
-          </p>
+          <h5>
+            <i>The Blood Bank Management System</i> is a comprehensive software
+            solution designed to streamline and enhance the operations of blood
+            banks. This system efficiently manages the entire process of blood
+            donation, collection, testing, storage, and distribution. It
+            includes features such as donor registration, blood type tracking,
+            inventory management, donor eligibility screening, and real-time
+            monitoring of blood units. With user-friendly interfaces for both
+            staff and donors, the system ensures accurate record-keeping, quick
+            retrieval of information, and seamless communication between
+            different departments. This digital solution ultimately promotes the
+            effective coordination of blood bank activities, ensuring a reliable
+            and timely supply of safe blood for patients in need.
+          </h5>
+          <EmbeddedGoogleMap />
         </div>
       </div>
     </Layout>

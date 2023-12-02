@@ -38,7 +38,7 @@ const OrganisationPage = () => {
 
   return (
     <Layout>
-      <table className="table ">
+      <table className="table table-striped table-dark">
         <thead>
           <tr>
             <th scope="col">Name</th>

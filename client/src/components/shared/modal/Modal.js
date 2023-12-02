@@ -91,9 +91,10 @@ const Modal = () => {
                 className="form-select"
                 aria-label="Default select example"
                 onChange={(e) => setBloodGroup(e.target.value)}
+                // style={{ display: "none" }}
               >
                 <option defaultValue={"Open this select menu"}>
-                  Open this select menu
+                  select your blood group
                 </option>
                 <option value={"O+"}>O+</option>
                 <option value={"O-"}>O-</option>
@@ -112,7 +113,7 @@ const Modal = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <InputType
-                labelText={"Quanitity (ML)"}
+                labelText={"Quanitity (Units)"}
                 labelFor={"quantity"}
                 inputType={"Number"}
                 value={quantity}

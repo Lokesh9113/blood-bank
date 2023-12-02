@@ -24,10 +24,10 @@ const Hospitals = () => {
 
   return (
     <Layout>
-      <table className="table ">
+      <table className="table table-striped table-dark">
         <thead>
           <tr>
-            <th scope="col">Name</th>
+            <th scope="col">Hospital Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Address</th>

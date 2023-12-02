@@ -32,10 +32,10 @@ const Donation = () => {
   return (
     <Layout>
       <div className="container mt-4">
-        <table className="table">
+        <table className="table table-striped table-dark">
           <thead>
             <tr>
-              <th scope="col">Blood Group</th>
+              {/* <th scope="col">Blood Group</th> */}
               <th scope="col">Inventory TYpe</th>
               <th scope="col">Quantity</th>
               <th scope="col">Email</th>
@@ -45,7 +45,7 @@ const Donation = () => {
           <tbody>
             {data?.map((record) => (
               <tr key={record._id}>
-                <td>{record.bloodGroup}</td>
+                {/* <td>{record.bloodGroup}</td> */}
                 <td>{record.inventoryType}</td>
                 <td>{record.quantity}</td>
                 <td>{record.email}</td>

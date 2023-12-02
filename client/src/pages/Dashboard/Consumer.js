@@ -32,7 +32,7 @@ const Consumer = () => {
   return (
     <Layout>
       <div className="container mt-4">
-        <table className="table">
+        <table className="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">Blood Group</th>

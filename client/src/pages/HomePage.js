@@ -37,16 +37,18 @@ const HomePage = () => {
       ) : (
         <>
           <div className="container">
-            <h4
-              className="ms-4"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-              style={{ cursor: "pointer" }}
-            >
-              <i className="fa-solid fa-plus text-success py-4"></i>
-              Add Inventory
-            </h4>
-            <table className="table ">
+            {user?.role !== "donar" && (
+              <h5
+                className="ms-7 btn btn btn-info btn-lg"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                style={{ cursor: "pointer" }}
+              >
+                <i className="fa-solid fa-plus text-success py-2"></i>
+                Add Inventory
+              </h5>
+            )}
+            <table className="table table table-striped table-dark">
               <thead>
                 <tr>
                   <th scope="col">Blood Group</th>
@@ -61,7 +63,7 @@ const HomePage = () => {
                   <tr key={record._id}>
                     <td>{record.bloodGroup}</td>
                     <td>{record.inventoryType}</td>
-                    <td>{record.quantity} (ML)</td>
+                    <td>{record.quantity} (Units)</td>
                     <td>{record.email}</td>
                     <td>
                       {moment(record.createdAt).format("DD/MM/YYYY hh:mm A")}

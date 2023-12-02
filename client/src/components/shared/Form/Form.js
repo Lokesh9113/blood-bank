@@ -5,6 +5,7 @@ import { handleLogin, handleRegister } from "../../../services/authService";
 
 const Form = ({ formType, submitBtn, formTitle }) => {
   const [email, setEmail] = useState("");
+  const [bloodGroup, setBloodGroup] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("donar");
   const [name, setName] = useState("");
@@ -168,21 +169,33 @@ const Form = ({ formType, submitBtn, formTitle }) => {
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <InputType
-                    labelText={"website"}
-                    labelFor={"forWebsite"}
-                    inputType={"text"}
-                    name={"website"}
-                    value={website}
-                    onChange={(e) => setWebsite(e.target.value)}
-                  />
-                  <InputType
                     labelText={"Address"}
                     labelFor={"forAddress"}
-                    inputType={"text"}
+                    inputType={"address"}
                     name={"address"}
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
                   />
+                  {role === "donar" && (
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                      onChange={(e) => setBloodGroup(e.target.value)}
+                    >
+                      <option defaultValue={"Open this select menu"}>
+                        select your blood group
+                      </option>
+                      <option value={"O+"}>O+</option>
+                      <option value={"O-"}>O-</option>
+                      <option value={"AB+"}>AB+</option>
+                      <option value={"AB-"}>AB-</option>
+                      <option value={"A+"}>A+</option>
+                      <option value={"A-"}>A-</option>
+                      <option value={"B+"}>B+</option>
+                      <option value={"B-"}>B-</option>
+                    </select>
+                  )}
+
                   <InputType
                     labelText={"Phone"}
                     labelFor={"forPhone"}

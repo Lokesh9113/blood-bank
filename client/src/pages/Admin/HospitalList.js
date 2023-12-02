@@ -40,7 +40,7 @@ const HospitalList = () => {
 
   return (
     <Layout>
-      <table className="table ">
+      <table className="table table-hover table-dark">
         <thead>
           <tr>
             <th scope="col">Name</th>
